@@ -32,18 +32,18 @@
                 <!-- ACTION BUTTONS -->
                 <div class="action-buttons-vertical">
                     <% if (p.status === "processed") { %>
-                        <form method="POST" action="/purchase/deliver/<%= p.id %>" onsubmit="return markDelivered(event)">
+                        <form method="POST" action="/purchase/deliver/<%= p.id %>">
                             <button class="btn-green" type="submit">Mark Delivered</button>
                         </form>
-                        <form method="POST" action="/purchase/cancel/<%= p.id %>" onsubmit="return confirmCancel(event)">
+                        <form method="POST" action="/purchase/cancel/<%= p.id %>">
                             <button class="btn-danger" type="submit">Cancel Order</button>
                         </form>
                     <% } else if (p.status === "delivered") { %>
-                        <form method="POST" action="/purchase/undo/<%= p.id %>" onsubmit="return undoDelivery(event)">
+                        <form method="POST" action="/purchase/undo/<%= p.id %>">
                             <button class="btn-yellow" type="submit">Undo Delivery</button>
                         </form>
                     <% } else if (p.status === "canceled") { %>
-                        <form method="POST" action="/purchase/undo/<%= p.id %>" onsubmit="return undoCancel(event)">
+                        <form method="POST" action="/purchase/undo/<%= p.id %>">
                             <button class="btn-yellow" type="submit">Undo Cancel</button>
                         </form>
                     <% } %>

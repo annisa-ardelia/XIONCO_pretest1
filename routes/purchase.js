@@ -13,10 +13,10 @@ const router = express.Router();
 
 router.get("/", listPurchase);
 router.get("/form", formPurchase);
-router.get("/:id", purchaseDetails);
 router.post("/", createPurchase);
 router.post("/cancel/:id", cancelPurchase);
 router.post("/deliver/:id", markDelivered);
 router.post("/undo/:id", undoToProcessed);
+router.get("/:id", purchaseDetails);
 
 export default router;

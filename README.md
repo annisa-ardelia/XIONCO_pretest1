@@ -100,7 +100,16 @@ Name the project whatever you want and **choose `AWS Asia Pacific 1 (Singapore)`
 
 <img width="1237" height="39" alt="image" src="https://github.com/user-attachments/assets/c2a4a020-e24d-4339-acd8-2d68f20ba1c8" />
 
-### Run the project
+### Go to SQL Editor Page on the left navbar
+<img width="1919" height="870" alt="image" src="https://github.com/user-attachments/assets/8ff09939-9fe4-4dd7-b09b-8938f4630f22" />
+
+### Copy all of `queries.sql` from this project
+<img width="1919" height="757" alt="image" src="https://github.com/user-attachments/assets/c2e03ee2-7ab2-4029-adb2-d609ba62cad5" />
+
+### Paste it into the NeonDB and click run
+<img width="1919" height="872" alt="image" src="https://github.com/user-attachments/assets/3b2d60c2-4943-431a-a9fc-a2bb5845bdad" />
+
+### Open the project terminal and run the project
 ```
 node app.js
 ```

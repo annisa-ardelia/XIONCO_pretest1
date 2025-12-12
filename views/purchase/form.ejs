@@ -1,0 +1,46 @@
+<h2 class="title">Purchase Input</h2>
+
+<div class="card">
+    <form method="POST" action="/purchase">
+        <div class="preview">
+            <img id="productImage" src="" alt="Product Image" class="product-image">
+        </div>
+        <label class="label">Product:</label>
+        <select name="product_id" id="productSelect" class="input">
+            <% products.forEach(p => { %>
+                <option 
+                    value="<%= p.id %>" 
+                    data-image="<%= p.image_url %>"
+                >
+                    <%= p.name %>
+                </option>
+            <% }) %>
+        </select>
+        <div class="quantity">
+            <label class="label">Quantity:</label>
+            <input type="number" name="quantity" class="input" required />
+        </div>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
+
+<script>
+    const select = document.getElementById("productSelect");
+    const img = document.getElementById("productImage");
+
+    function updateImage() {
+        const selected = select.options[select.selectedIndex];
+        const url = selected.getAttribute("data-image");
+
+        if (url) {
+            img.src = url;
+            img.style.display = "block";
+        }
+    }
+
+    // Update on load (first option)
+    updateImage();
+
+    // Update when user changes selection
+    select.addEventListener("change", updateImage);
+</script>

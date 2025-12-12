@@ -1,0 +1,9 @@
+<h2 class="title">Product Details</h2>
+
+<div class="card-detail">
+    <img src="<%= purchase.image_url %>" class="image" />
+    <h3><%= purchase.product %></h3>
+    <p>Quantity: <%= purchase.quantity %></p>
+    <p>Status: <%= purchase.status %></p>
+    <p>Date: <%= purchase.created_at.toLocaleString() %></p>
+</div>

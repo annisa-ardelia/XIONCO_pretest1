@@ -1,0 +1,42 @@
+<div class="hero">
+    <div class="hero-slides">
+        <div class="slide active" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/036/092/681/small/ai-generated-black-living-room-interior-design-with-sofa-minimal-aesthetic-3d-rendered-photo.jpg');"></div>
+        <div class="slide" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIISzUsfGCK3cpxE9P8L_QZm1kHy_5ZLnIGw&s');"></div>
+        <div class="slide" style="background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230617/pngtree-contemporary-living-room-with-sofa-and-floating-tv-on-grey-wall-image_3642394.jpg');"></div>
+        <div class="slide" style="background-image: url('https://png.pngtree.com/background/20231030/original/pngtree-elegant-3d-rendering-of-a-timeless-black-wall-picture-image_5795414.jpg');"></div>
+        <div class="slide" style="background-image: url('https://cdn.decoist.com/wp-content/uploads/2024/01/Great-Choice-94506.png');"></div>
+        <div class="slide" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-2xHBXz_3krrdMRQwI8xST7mhSN_tBhQgEQ&s');"></div>
+    </div>
+
+    <button class="hero-arrow left" onclick="prevSlide()">❮</button>
+    <button class="hero-arrow right" onclick="nextSlide()">❯</button>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">Admin Dashboard</h1>
+        <p class="hero-subtitle">Effortlessly manage products, stock, and purchases.</p>
+    </div>
+</div>
+
+<script>
+    let current = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove("active"));
+        slides[index].classList.add("active");
+    }
+
+    function nextSlide() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+    }
+
+    function prevSlide() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+    }
+
+    // Auto slide every 5 seconds
+    setInterval(nextSlide, 5000);
+</script>

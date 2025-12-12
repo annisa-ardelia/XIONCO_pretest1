@@ -1,0 +1,391 @@
+body.dark {
+    background: #0f0f0f;
+    color: #e5e5e5;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #1a1a1a;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    text-size-adjust: large;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.navbar a {
+    color: #bbb;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.navbar a:hover {
+    color: #fff;
+}
+.nav-left {
+    font-size: 22px;     /* adjust to your liking */
+    font-weight: 600;    /* bold but not too heavy */
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    padding: 8px;      /* ensures brighter than the other links */
+}
+
+/* LAYOUT */
+.container {
+    padding: 25px;
+}
+
+/* TITLES */
+.title {
+    font-size: 26px;
+    margin-bottom: 20px;
+    margin: 0 0 15px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* TABLE */
+.table-wrapper {
+    overflow-x: auto;
+}
+.table, .table-purchase {
+    width: 80%;
+    margin: 0 auto;
+    background: #1b1b1b;
+    border: 2px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.table th, .table-purchase th {
+    background: #222;
+    padding: 12px;
+}
+.table td, .table-purchase td {
+    padding: 12px;
+    border-top: 1px solid #333; 
+    border-left: 1px solid #333;
+}
+.table tr:hover, .table-purchase tr:hover {
+    background: #262626;
+}
+
+/* PRODUCT LIST TABLE */
+/* Column 1: ID (center) */
+.table th:nth-child(1),
+.table td:nth-child(1) {
+    text-align: center;
+}
+/* Column 2: Photo (center) */
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    text-align: center;
+}
+/* Column 3: Name (left) */
+.table th:nth-child(3),
+.table td:nth-child(3) {
+    text-align: left;
+}
+/* Column 4: Price header (center) */
+.table th:nth-child(4){
+    text-align: center;
+}
+/* Column 4: Price content (right) */
+.table td:nth-child(4) {
+    text-align: right;
+}
+/* Column 5: Stock (center) */
+.table th:nth-child(5),
+.table td:nth-child(5) {
+    text-align: center;
+}
+
+/* PRODUCT PURCHASE TABLE */
+/* Column 1: ID (center) */
+.table-purchase th:nth-child(1),
+.table-purchase td:nth-child(1) {
+    text-align: center;
+}
+/* Column 2: Photo (center) */
+.table-purchase th:nth-child(2),
+.table-purchase td:nth-child(2) {
+    text-align: center;
+}
+/* Column 3: Product (left) */
+.table-purchase th:nth-child(3),
+.table-purchase td:nth-child(3) {
+    text-align: left;
+}
+/* Column 4: Quantity (center) */
+.table-purchase th:nth-child(4),
+.table-purchase td:nth-child(4) {
+    text-align: center;
+}
+/* Column 5: Status (center) */
+.table-purchase th:nth-child(5),
+.table-purchase td:nth-child(5) {
+    text-align: center;
+}
+/* Column 6: Date (center) */
+.table-purchase th:nth-child(6),
+.table-purchase td:nth-child(6) {
+    text-align: center;
+}
+/* Column 7: Action (center) */
+.table-purchase th:nth-child(7),
+.table-purchase td:nth-child(7) {
+    text-align: center;
+}
+
+/* PRODUCT IMG */
+.product-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.image {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.product-image {
+    width: 200px;
+    margin-top: 10px;
+    display: none;
+}
+.preview {
+    margin-bottom: 30px;
+}
+
+.card-detail {
+    background: #1a1a1a;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0 15px 0;
+    gap: 0px;
+    
+}
+.card-detail .image ,
+.card-detail h3,
+.card-detail p {
+    margin: 8px 0;
+}
+
+/* FORM */
+.card {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+}
+.label {
+    display: block;
+    margin: 10px 0 5px -20%;
+}
+.input, select {
+    width: 140%;
+    padding: 10px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin: 0 0 0 -20%;
+    position: relative;
+    z-index: 10;
+}
+
+/* QUANTITY ROW */
+.quantity {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    display: block;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 0 0;
+}
+.quantity .label {
+    margin-top: 15px;
+    display: block;
+    margin-bottom: 5px;
+}
+.quantity .input {
+    width: 130%;
+    padding: 10px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* BUTTONS */
+.btn {
+    margin-top: 15px;
+    width: 60%;
+    padding: 10px;
+    background: #3a3f47;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 15px 0 0 20%;
+}
+.btn:hover {
+    background: #5b5e63;
+}
+.btn-danger {
+    padding: 8px 14px;
+    background: #d9534f;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-danger:hover {
+    background: #c9302c;
+}
+.btn-green {
+    padding: 8px 14px;
+    background: #5cb85c;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-green:hover {
+    background: #4cae4c;
+}
+.btn-yellow {
+    padding: 8px 14px;
+    background: #f0ad4e;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-yellow:hover {
+    background: #ec971f;
+}
+.action-cell {
+    text-align: center;
+    padding: 12px;
+}
+/* Status Badge */
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.status-badge.processed { background: #3a3f47; color: #fff; }
+.status-badge.delivered { background: #2c8f2c; color: #fff; }
+.status-badge.canceled  { background: #8a1e1e; color: #fff; }
+/* Vertical Buttons */
+.action-buttons-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.action-buttons-vertical form button {
+    width: 120px;
+    padding: 8px;
+    margin: 0 auto;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    border-radius: 12px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+/* SLIDES CONTAINER */
+.hero-slides {
+    position: absolute;
+    inset: 0;
+}
+/* EACH SLIDE */
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+/* ACTIVE SLIDE */
+.slide.active {
+    opacity: 1;
+}
+/* OVERLAY */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(2px);
+}
+/* CONTENT */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 80%;
+}
+/* ARROWS */
+.hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 20;
+    transition: 0.3s;
+}
+.hero-arrow:hover {
+    background: rgba(0,0,0,0.7);
+}
+.hero-arrow.left {
+    left: 20px;
+}
+.hero-arrow.right {
+    right: 20px;
+}
+.hero-title {
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+.hero-subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+}

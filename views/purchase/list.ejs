@@ -1,0 +1,55 @@
+<h2 class="title">Purchase Log History</h2>
+
+<div class="table-wrapper">
+    <table class="table-purchase">
+        <tr>
+            <th>ID</th>
+            <th>Photo</th>
+            <th>Product</th>
+            <th>Qty</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+
+        <% purchases.forEach(p => { %>
+        <tr class="clickable-row" onclick="window.location='/purchase/<%= p.id %>'">
+            <td><%= p.id %></td>
+            <td>
+                <img src="<%= p.image_url %>" class="product-img" />
+            </td>
+            <td><%= p.product %></td>
+            <td><%= p.quantity %></td>
+            <td>
+                <span class="status <%= p.status %>"><%= p.status %></span>
+            </td>
+            <td><%= p.created_at.toLocaleString() %></td>
+            <td class="action-cell">
+                <!-- CURRENT STATUS -->
+                <div class="status-badge <%= p.status %>">
+                    <%= p.status %>
+                </div>
+                <!-- ACTION BUTTONS -->
+                <div class="action-buttons-vertical">
+                    <% if (p.status === "processed") { %>
+                        <form method="POST" action="/purchase/deliver/<%= p.id %>" onsubmit="return markDelivered(event)">
+                            <button class="btn-green" type="submit">Mark Delivered</button>
+                        </form>
+                        <form method="POST" action="/purchase/cancel/<%= p.id %>" onsubmit="return confirmCancel(event)">
+                            <button class="btn-danger" type="submit">Cancel Order</button>
+                        </form>
+                    <% } else if (p.status === "delivered") { %>
+                        <form method="POST" action="/purchase/undo/<%= p.id %>" onsubmit="return undoDelivery(event)">
+                            <button class="btn-yellow" type="submit">Undo Delivery</button>
+                        </form>
+                    <% } else if (p.status === "canceled") { %>
+                        <form method="POST" action="/purchase/undo/<%= p.id %>" onsubmit="return undoCancel(event)">
+                            <button class="btn-yellow" type="submit">Undo Cancel</button>
+                        </form>
+                    <% } %>
+                </div>
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+</div>

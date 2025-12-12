@@ -1,0 +1,25 @@
+<h2 class="title">Product Stock List</h2>
+
+<div class="table-wrapper">
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </tr>
+
+        <% products.forEach(p => { %>
+        <tr class="clickable-row" onclick="window.location='/product/<%= p.id %>'">
+            <td><%= p.id %></td>
+            <td>
+                <img src="<%= p.image_url %>" class="product-img" />
+            </td>
+            <td><%= p.name %></td>
+            <td><%= p.price.toLocaleString() %></td>
+            <td><%= p.stock %></td>
+        </tr>
+        <% }) %>
+    </table>
+</div>

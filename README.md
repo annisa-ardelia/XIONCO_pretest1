@@ -28,9 +28,9 @@ This web-based system lets admins effortlessly:
 * Quickly add new purchases and let the system handle stock updates.
 * Keep tabs on each order’s journey with clear statuses:
 
-  * `processed` → ready to deliver
-  * `delivered` → mark as received or undo delivery
-  * `canceled` → undo cancel if needed
+  * 🔵 `processed` → ready to deliver
+  * 🟢 `delivered` → mark as received or undo delivery
+  * 🔴 `canceled` → undo cancel if needed
 * Smart action buttons appear exactly when you need them.
 * Visual cues with images and badges make tracking orders a breeze.
 
@@ -45,16 +45,16 @@ This web-based system lets admins effortlessly:
 
 # Tech Stack
 
-## Backend
+### Backend
 ![Express.js](https://img.shields.io/badge/Express.js-%23404d59.svg?logo=express&logoColor=%2361DAFB) ![NodeJS](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)
 
-## Frontend
+### Frontend
 ![EJS](https://img.shields.io/badge/EJS-B4CA65?logo=ejs&logoColor=000) ![CSS](https://img.shields.io/badge/CSS-663399?logo=css&logoColor=fff)
 
-## Database
+### Database
 ![NeonDB](https://img.shields.io/badge/NeonDB-555?logo=naver)
 
-## Languages
+### Languages
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000) ![HTML](https://img.shields.io/badge/HTML-262729?logo=htmx&logoColor=white)
 
 ---

@@ -3,6 +3,9 @@
 ## Developer
 Annisa Ardelia Setiawan
 
+## Deployed at
+https://xionco-pretest1.vercel.app/
+
 ## Description
 <b>This project is a web-based admin system for <ins>XIONCO</ins></b>
 
